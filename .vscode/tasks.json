@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build accessingPublicMembers.cpp",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "accessingPublicMembers.cpp", 
+        "-o",
+        "accessingPublicMembers.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

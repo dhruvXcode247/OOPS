@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run accessingPublicMembers.exe",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\accessingPublicMembers.exe",   // 👈 must point to your exe
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,                // 👈 integrated terminal
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+      "preLaunchTask": "Build accessingPublicMembers.cpp"
+    }
+  ]
+}

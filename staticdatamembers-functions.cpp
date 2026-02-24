@@ -2,9 +2,12 @@
 using namespace std;
 
 class customer {
+    // according to the concept of encapsulation variables must be declared in private whereas they can be accessed in public
+    // section using functions, don't give direct access to the variables in main function
     string name;
     int account_number;
     int balance;
+    int age;
     // here total_customer will give an error bcoz it is declared in private
     static int total_customer;
     static int total_balance;
@@ -15,6 +18,7 @@ class customer {
         this->name=name;
         this->account_number=account_number;
         this->balance=balance;
+        this -> age=0;
         total_customer++;
         total_balance+=balance;
     }
@@ -40,10 +44,17 @@ class customer {
         }
     }
 
-
+    void updateage(int age) {
+        if (age>0 && age<100) {
+            this->age=age;
+        }
+        else {
+            cout << "Invalid age" << endl;
+        }
+    }
 
     void display () {
-        cout << name << " " << account_number << " " << balance << " " << total_customer << endl; 
+        cout << name << " " << account_number << " " << balance << " " << total_customer << " " << age << endl; 
     }
 };
 
@@ -60,6 +71,8 @@ int main () {
     // customer::accessStatic();
     A1.deposit(800);
     A2.withdraw(500);
+    A1.updateage(12);
+    A1.display();
     customer::accessStatic();
     return 0;
 }

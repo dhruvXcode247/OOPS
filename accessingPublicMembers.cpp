@@ -13,7 +13,7 @@ int main() {
     s1.name="Rohit";
     s1.rollno=19;
     s1.grade="A+";
-    cout << s1.name << endl;;
+    cout << s1.name << endl;
 
     Student s2;
     s2.name="Dhruv";

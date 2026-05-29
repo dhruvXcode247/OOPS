@@ -1,46 +1,61 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Person {
-    protected:
-    // protected part accessible in the base as well as the derived class
-    string name;
+class Engineer {
 
-    public:
-    void introduce () {
-        cout << "Hello my name is:" << name << endl;
+    void money() {
+        cout << "Hello Money\n";
     }
-};
-
-class employee:public Person {
-
-    protected:
-    int salary;
 
     public:
-    void monthly_salary() {
-        cout << "My monthly salary is:" << salary << endl;
-    }
-};
+    string specialization;
 
-class Manager: public employee {
-
-    public:
-    string department;
-
-    Manager(string name,int salary, string department) {
-        this->name=name;
-        this->salary=salary;
-        this->department;
+    Engineer () {
+        cout << "Hello engineer\n";
     }
 
     void work() {
-        cout << "I am leading the department" << department << endl;
+        cout << "I have specialization in" << specialization << endl;
+    }
+};
+
+class Youtuber {
+
+    public:
+    int subscribers;
+
+    Youtuber() {
+        cout << "Hello Youtuber\n";
+    }
+
+    void contentcreator() {
+        cout << "I have a subscriber base of " << subscribers << endl;
+    }
+};
+
+class CodeTeacher: public Youtuber, public Engineer {
+
+    public:
+    string name;
+
+    CodeTeacher() {
+        cout << "hello Coder\n";
+    }
+
+    CodeTeacher(string name, string specialization, int subscribers) {
+        this->name=name;
+        this->specialization=specialization;
+        this->subscribers=subscribers;
+    }
+
+    void showcase() {
+        cout << "My name is " << name << endl;
+        work();
+        contentcreator();
     }
 };
 
 int main() {
-    Manager A1("Rohit",200,"Finance");
-    A1.department="Rohit";
+    CodeTeacher A1;
     return 0;
 }

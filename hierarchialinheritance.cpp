@@ -53,7 +53,7 @@ class Teacher: public Human {
     }
 
     void display() {
-        cout << name << " " << age << " " << " " << fees << endl; 
+        cout << name << " " << age << " " << " " << salary << endl; 
     }
 };
 
